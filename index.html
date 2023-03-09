@@ -54,10 +54,10 @@ const texture = loader.load('/jup.jpg')
                         
                         
 			const geometry = new THREE.SphereGeometry(3,25, 35);
-			const material = new THREE.MeshStandardMaterial( { color: '#f1cb94',
+			const material = new THREE.MeshStandardMaterial( { color: 'grey',
 
 map: texture,
-roughness: 0.8,
+roughness: 2,
 metalness: 0.1,
  } );
 			const sphere = new THREE.Mesh( geometry, material );
