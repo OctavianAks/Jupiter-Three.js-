@@ -2,7 +2,6 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<title>Jup app</title>
 		<style>
 			body { margin: 0;}
@@ -25,9 +24,10 @@
 
 			const scene = new THREE.Scene();
 			const camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 1, 10000 );
-                        var texture_fg = new THREE.TextureLoader().load("fg.jpg", () => {
-                        scene.background = texture_fg;  }); 
-                  
+
+                  var texture_fg = new THREE.TextureLoader().load("fg.jpg", () => {
+    scene.background = texture_fg;
+  }); 
 
 
                     
@@ -48,18 +48,18 @@ scene.add( light );
 
 
 const loader = new THREE.TextureLoader()
-loader.crossOrigin = ""
-const texture = loader.load('jup.jpg')			
+
+const texture = loader.load('/jup.jpg')			
 
 
 
                         
                         
 			const geometry = new THREE.SphereGeometry(3,25, 35);
-			const material = new THREE.MeshPhongMaterial( { color: 'white',
+				const material = new THREE.MeshPhongMaterial( { color: '#f1cb94',
 
 map: texture,
-roughness: 2,
+roughness: 0.8,
 metalness: 0.1,
  } );
 			const sphere = new THREE.Mesh( geometry, material );
