@@ -24,6 +24,9 @@
 			const camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 1, 10000 );
 
                   
+var texture_fg = new THREE.TextureLoader().load("fg.jpg", () => {
+    scene.background = texture_fg;
+  }); 
 
 
                     
