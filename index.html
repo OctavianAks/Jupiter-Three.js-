@@ -25,7 +25,8 @@
 
 			const scene = new THREE.Scene();
 			const camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 1, 10000 );
-
+                        var texture_fg = new THREE.TextureLoader().load("fg.jpg", () => {
+                        scene.background = texture_fg;
                   
 
 
@@ -45,8 +46,6 @@ scene.add( directionalLight );
 const light = new THREE.HemisphereLight( 0xffffbb, 0x080820, 2);
 scene.add( light );
 
-var texture_fg = new THREE.TextureLoader().load("fg.jpg", () => {
-    scene.background = texture_fg;
 
 const loader = new THREE.TextureLoader()
 loader.crossOrigin = ""
