@@ -45,6 +45,8 @@ scene.add( directionalLight );
 const light = new THREE.HemisphereLight( 0xffffbb, 0x080820, 2);
 scene.add( light );
 
+var texture_fg = new THREE.TextureLoader().load("fg.jpg", () => {
+    scene.background = texture_fg;
 
 const loader = new THREE.TextureLoader()
 loader.crossOrigin = ""
